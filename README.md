@@ -1,77 +1,90 @@
-# Photos-Info-Extractor
-A tool to extract information of your images in Google Photos
 
+# Google Photos Album Photo List Script
 
-## How to use the Python script to list the photos in a Google Photos album
+## Need of this Project
+> *Note: The purpose of the project is yet to be defined.*
 
-**Prerequisites:**
+## Instructions for New Users
 
-* A Google Cloud Platform account.
-* Python 3.7 or higher.
-* A virtual environment.
+### Prerequisites
+- A Google Cloud Platform account.
+- Python 3.7 or higher installed on your system.
 
-**Steps:**
+### Set Up Python Virtual Environment
 
-1. Create a new virtual environment:
+#### Create a New Environment
+Create a new virtual environment by running the following command in your terminal:
 
-python3 -m venv myenv
+```bash
+python -m venv myenv
+```
 
+#### Activate the Environment
+Activate the virtual environment with:
 
-2. Activate the virtual environment:
+On Unix or MacOS:
 
+```bash
 source myenv/bin/activate
+```
 
+On Windows:
 
-3. Install the required packages:
+```cmd
+myenv\Scripts\activate
+```
 
-pip3 install google-auth-oauthlib
-pip3 install google-api-python-client
+#### Install Required Packages
+Install the required packages using `pip`:
 
+```bash
+pip install google-auth-oauthlib
+pip install google-api-python-client
+```
 
-4. Enable the Google Photos API in the Google Cloud Platform Console:
+### Create a New Project
+1. Go to the [Google Cloud Platform Console](https://console.cloud.google.com/).
+2. Click the hamburger menu (three horizontal lines) in the top left corner.
+3. Select `Projects`.
+4. Click the `Create Project` button.
+5. Enter a name for your project and select `Create`.
 
-Go to the Google Cloud Platform Console.
-Click the hamburger menu (three horizontal lines) in the top left corner of the page.
-Select APIs & Services > Library.
-Search for the Google Photos API and click on it.
-Click the Enable button.
+### Enable the Google Photos API
+1. In the Google Cloud Platform Console, click the hamburger menu.
+2. Navigate to `APIs & Services` > `Library`.
+3. Search for "Google Photos API" and select it.
+4. Click `Enable`.
 
-5. Create an OAuth client ID and download the OAuth 2.0 client credentials file:
+### Create an OAuth Client ID
+1. In the Google Cloud Platform Console, access the hamburger menu.
+2. Go to `APIs & Services` > `Credentials`.
+3. Select `Create Credentials` and choose `OAuth client ID`.
+4. Click `Create`.
+5. Select `Application type` and proceed to `Next`.
+6. Choose `Web application` and select `Create`.
+7. Download the JSON file for the OAuth client ID.
 
-In the Google Cloud Platform Console, click the hamburger menu (three horizontal lines) in the top left corner of the page.
-Select APIs & Services > Credentials.
-Click the Create Credentials button.
-Select OAuth client ID from the dropdown menu.
-Click the Create button.
-Select Application type and click Next.
-Select Web application and click Create.
-Copy the Client ID and Client secret values.
-Click the Download JSON button to download the OAuth 2.0 client credentials file.
+### Place the OAuth 2.0 Client Credentials File
+Move the downloaded OAuth 2.0 client credentials JSON file to the same directory as your Python script.
 
-6. Place the OAuth 2.0 client credentials file in the same directory as your Python script.
+### Authenticate with the Google Photos API
+1. Execute the Python script with the command: `python3 google_photos.py`
+2. Follow the on-screen instructions to authenticate with the Google Photos API.
 
-7. Run the Python script:
+### List the Photos in a Google Photos Album
+1. After authentication, input the album ID when prompted.
+2. Press `Enter`.
+3. The script will output the list of photos in the specified album to the console.
 
-python3 google_photos.py
+### Sample Output
 
-Follow the instructions on the screen to authenticate with the Google Photos API.
+```bash
+IMG_7968.HEIC
+IMG_7967.HEIC
+IMG_7966.HEIC
+IMG_7965.HEIC
+IMG_7964.HEIC
+IMG_7963.HEIC
+IMG_7962.HEIC
+```
 
-Enter the album ID of the album that you want to list the photos for.
-
-The script will list all of the photos in the album to the console.
-
-Notes:
-
-If you see a message like // photo attached, you need to put the redirect URL in the Authorized redirect URIs option in Google Cloud.
-To add yourself to the test user account for testing, add your email ID to the test users list in Google Cloud.
-Example usage:
-
-python3 google_photos.py
-
-Album title: My Vacation Photos, Album ID: 1234567890
-
-Enter the album ID: 1234567890
-
-[1.jpg, 2.jpg, 3.jpg, ...]
-
-You can copy and paste this text into a new file and save it with the .md extension. Once you have saved the file, you can open it in a text editor or a Markdown viewer to see the formatted instructions.
