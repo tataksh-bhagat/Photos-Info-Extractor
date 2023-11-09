@@ -72,7 +72,7 @@ pip install google-api-python-client
 
 ### Place the OAuth 2.0 Client Credentials File
 Move the downloaded OAuth 2.0 client credentials JSON file to the same directory as your Python script.
-Make sure the file is named 'credentials.json'
+Make sure the file is named `credentials.json`
 
 ### Authenticate with the Google Photos API
 1. Execute the Python script with the command: `python3 google_photos.py`
