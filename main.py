@@ -112,7 +112,7 @@ if __name__ == '__main__':
   # List the photos in the album.
   service = login_to_google_photos()
   print()
-  print("All the images in your Google Photos Account are: ")
+  print("All the images in your Google Photos Album are: ")
   print()
   list_album_photos(service, album_id)
   print()
