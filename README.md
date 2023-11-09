@@ -72,6 +72,7 @@ pip install google-api-python-client
 
 ### Place the OAuth 2.0 Client Credentials File
 Move the downloaded OAuth 2.0 client credentials JSON file to the same directory as your Python script.
+Make sure the file is named 'credentials.json'
 
 ### Authenticate with the Google Photos API
 1. Execute the Python script with the command: `python3 google_photos.py`
@@ -99,10 +100,10 @@ End of Program
 ```
 
 ### Bonus Tip
-Use the following command to copy files from folder to new destination
+Use the command below to copy files from one folder to a new destination. 
+This command is designed to handle file names that include spaces.
 
 ```bash
 while IFS= read -r file; do cp "$file" '/path/to/destiantion/folder/'; done < '/path/to/plain-text-file-with-photos-names.txt'
-
 ```
 
