@@ -79,6 +79,8 @@ Move the downloaded OAuth 2.0 client credentials JSON file to the same directory
 ### Sample Output
 
 ```bash
+All the images in your Google Photos Album are: 
+
 IMG_7968.HEIC
 IMG_7967.HEIC
 IMG_7966.HEIC
@@ -86,5 +88,7 @@ IMG_7965.HEIC
 IMG_7964.HEIC
 IMG_7963.HEIC
 IMG_7962.HEIC
+
+End of Program
 ```
 
