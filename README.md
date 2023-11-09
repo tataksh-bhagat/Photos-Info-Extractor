@@ -2,7 +2,13 @@
 # Google Photos Album Photo List Script
 
 ## Need of this Project
-> *Note: The purpose of the project is yet to be defined.*
+This project was conceived out of a personal necessity to manage and access a dual-copy photo library more efficiently. As a Google Pixel phone user, I benefit from the unlimited backup feature for photos, which ensures that my pictures are available on any device. However, despite the convenience of cloud storage, I am committed to maintaining original quality backups of my photos and videos on an external hard drive.
+
+The challenge arises when attempting to retrieve specific high-quality images from the hard drive, where they are stored en masse in a single folder. Here, Google Photos' robust indexing system becomes invaluable. By creating albums in Google Photos based on specific criteria—be it faces, pets, or places—I am able to organize the images conveniently.
+
+The purpose of this tool is to streamline the process of aligning my hard drive's content with my Google Photos albums. It fetches the filenames of photos from a specified Google Photos album, making it effortless to identify and transfer these files from the external hard drive to my laptop, ensuring that I always have ready access to the original, high-quality versions of my images, irrespective of my location or the device in use.
+
+By bridging the gap between cloud and physical storage, this tool enhances my workflow, provides a safeguard for my digital memories, and delivers peace of mind that comes from having a reliable and personal archival system.
 
 ## Instructions for New Users
 
@@ -90,5 +96,13 @@ IMG_7963.HEIC
 IMG_7962.HEIC
 
 End of Program
+```
+
+### Bonus Tip
+Use the following command to copy files from folder to new destination
+
+```bash
+while IFS= read -r file; do cp "$file" '/path/to/destiantion/folder/'; done < '/path/to/plain-text-file-with-photos-names.txt'
+
 ```
 
