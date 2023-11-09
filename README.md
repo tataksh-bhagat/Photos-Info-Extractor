@@ -103,11 +103,11 @@ End of Program
 Use the command below to copy files from one folder to a new destination. 
 This command is designed to handle file names that include spaces.
 
-### Future Scope
-The script can be modified to additionally retrieve download links, camera model, focal length, ISO details, and shutter speed information etc.
-
-
 ```bash
 while IFS= read -r file; do cp "$file" '/path/to/destiantion/folder/'; done < '/path/to/plain-text-file-with-photos-names.txt'
 ```
+
+### Future Scope
+The script can be modified to additionally retrieve download links, camera model, focal length, ISO details, and shutter speed information etc.
+
 
